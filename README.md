@@ -43,3 +43,7 @@ To run the app in development mode run
 ```bash
 npm run start:dev
 ```
+
+## Contributing
+  
+Please ensure [you signed our CLA](https://pspdfkit.com/guides/web/current/miscellaneous/contributing/) so we can accept your contributions.
