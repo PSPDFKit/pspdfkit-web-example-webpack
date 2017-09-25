@@ -1,0 +1,99 @@
+* { box-sizing: border-box }
+html, body { height: 100%; }
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/**
+ * Main App container
+ */
+
+.App {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: calc(100vh - 6px);
+  margin-top: 6px;
+  padding-top: 2rem;
+  background-color: white;
+}
+
+
+/**
+ * Drag and Drop component
+ */
+
+.DropTarget {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 3px dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.DropTarget.is-hidden {
+  z-index: -1;
+  opacity: 0;
+}
+
+
+/**
+ * The overlay is needed for when there are iframes
+ * in the page. In those cases the dragenter event won't
+ * fire on the parent document.
+ */
+
+.DropTargetOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.DropTargetOverlay:hover { display: none; }
+
+
+/**
+ * File picker component
+ */
+
+.FilePicker {
+  position: fixed;
+  top: 3px;
+  left: 3px;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: rgb(32, 172, 221);
+  color: white;
+  border-radius: 3px;
+  z-index: 2;
+  line-height: 1;
+}
+
+.FilePicker:hover,
+.FilePicker:focus {
+  background-color: rgb(33, 79, 125);
+}
+
+.FilePicker-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
