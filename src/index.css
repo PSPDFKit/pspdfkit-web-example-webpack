@@ -1,11 +1,13 @@
-* { box-sizing: border-box }
-html, body { height: 100%; }
+* { box-sizing: border-box; }
+
+html,
+body { height: 100%; }
+
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
-
 
 /**
  * Main App container
@@ -22,7 +24,6 @@ body {
   padding-top: 2rem;
   background-color: white;
 }
-
 
 /**
  * Drag and Drop component
@@ -42,11 +43,12 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.DropTarget.is-hidden {
+.DropTarget.is-hidden,
+.DropTargetOverlay.is-hidden {
+  display: none;
   z-index: -1;
   opacity: 0;
 }
-
 
 /**
  * The overlay is needed for when there are iframes
@@ -63,7 +65,6 @@ body {
 }
 
 .DropTargetOverlay:hover { display: none; }
-
 
 /**
  * File picker component

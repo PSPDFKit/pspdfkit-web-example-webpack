@@ -44,7 +44,7 @@ export default function initialize(onSuccess, onFail, preventLoad) {
       node.parentNode.removeChild(node);
       overlay.parentNode.removeChild(overlay);
     },
-    show: () => node.classList.remove("is-hidden"),
-    hide: () => node.classList.add("is-hidden")
+    show: () => { node.classList.remove('is-hidden'); overlay.classList.remove('is-hidden'); },
+    hide: () => { node.classList.add('is-hidden'); overlay.classList.add('is-hidden'); }
   };
 }
